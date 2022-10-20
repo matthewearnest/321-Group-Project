@@ -1,0 +1,183 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  margin: 0;
+  padding: 50px;
+  font-family: sans-serif;
+  background-color: #f2f2f2;
+}
+
+a {
+  text-decoration: none;
+  color: #3490DC;
+}
+
+a:hover {
+  color: #2779BD;
+  text-decoration: underline;
+}
+
+.container {
+  background-color: #ffffff;
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.container input[type='radio'] {
+  display: none;
+}
+
+.container .login,
+.container .register {
+  display: none;
+}
+
+.container .login .title,
+.container .register .title {
+  text-align: center;
+  padding: 0;
+  margin: 10px;
+}
+
+.container .login form label,
+.container .register form label {
+  font-weight: bold;
+  color: #555555;
+}
+
+.container .login form label[for="agreement"],
+.container .register form label[for="agreement"] {
+  font-weight: normal;
+}
+
+.container .login form input[type='email'],
+.container .login form input[type='password'],
+.container .login form input[type='text'],
+.container .login form input[type='date'],
+.container .login form select,
+.container .register form input[type='email'],
+.container .register form input[type='password'],
+.container .register form input[type='text'],
+.container .register form input[type='date'],
+.container .register form select {
+  width: 100%;
+  height: 35px;
+  padding: 0 10px;
+  font-size: 16px;
+  outline: none;
+  border: 0;
+  border-bottom: 1px solid rgba(23, 23, 23, 0.2);
+  /* border: 1px solid rgba(23, 23, 23, 0.2); */
+  
+}
+
+.container .login form input[type='email']:focus,
+.container .login form input[type='password']:focus,
+.container .login form input[type='text']:focus,
+.container .login form input[type='date']:focus,
+.container .login form select:focus,
+.container .register form input[type='email']:focus,
+.container .register form input[type='password']:focus,
+.container .register form input[type='text']:focus,
+.container .register form input[type='date']:focus,
+.container .register form select:focus {
+  border-color: rgba(23, 23, 23, 0.7);
+}
+
+.container .login form select,
+.container .login form input[type='date'],
+.container .register form select,
+.container .register form input[type='date'] {
+  border: 1px solid rgba(23, 23, 23, 0.2);
+}
+
+.container .login form [type='submit'],
+.container .register form [type='submit'] {
+  background-color: #2ecc71;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0 20px;
+  outline: none;
+  color: #ffffff;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 2px;
+  width: 100%;
+  height: 40px;
+  -webkit-box-shadow: 0 1px rgba(255, 255, 255, 0.2) inset, 0 2px 2px -1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px rgba(255, 255, 255, 0.2) inset, 0 2px 2px -1px rgba(0, 0, 0, 0.3);
+}
+
+.container .login form .sing-up,
+.container .register form .sing-up {
+  background-color: #3490DC;
+}
+
+.container .login form .input-control,
+.container .register form .input-control {
+  margin-bottom: 10px;
+}
+
+.container .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.container .footer label span {
+  display: inline-block;
+  font-size: 14px;
+  background: none;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-left: 3px solid #3490DC;
+  padding: 7px 10px;
+  color: #555555;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 2px 30px 30px 2px;
+}
+
+.container .footer label span:hover {
+  border-color: rgba(0, 0, 0, 0.3);
+  border-left-color: #3490DC;
+  background: #F8FAFC;
+  color: #222222;
+  -webkit-box-shadow: 0 1px rgba(255, 255, 255, 0.2) inset, 0 2px 2px -1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px rgba(255, 255, 255, 0.2) inset, 0 2px 2px -1px rgba(0, 0, 0, 0.3);
+}
+
+.container .footer label .sign-in {
+  border-left: 3px solid #2ecc71 !important;
+}
+
+.container .reg-radio:checked~.register {
+  display: block;
+}
+
+.container .login-radio:checked~.login {
+  display: block;
+}
