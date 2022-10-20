@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mearn\\Source\\Repos\\Fall2022\\321GroupProject\\321GroupProject.csproj": {}
+    "C:\\Users\\mearn\\Source\\Repos\\Fall2022\\321Group9Project\\api\\api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mearn\\Source\\Repos\\Fall2022\\321GroupProject\\321GroupProject.csproj": {
+    "C:\\Users\\mearn\\Source\\Repos\\Fall2022\\321Group9Project\\api\\api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mearn\\Source\\Repos\\Fall2022\\321GroupProject\\321GroupProject.csproj",
-        "projectName": "321GroupProject",
-        "projectPath": "C:\\Users\\mearn\\Source\\Repos\\Fall2022\\321GroupProject\\321GroupProject.csproj",
+        "projectUniqueName": "C:\\Users\\mearn\\Source\\Repos\\Fall2022\\321Group9Project\\api\\api.csproj",
+        "projectName": "api",
+        "projectPath": "C:\\Users\\mearn\\Source\\Repos\\Fall2022\\321Group9Project\\api\\api.csproj",
         "packagesPath": "C:\\Users\\mearn\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mearn\\Source\\Repos\\Fall2022\\321GroupProject\\obj\\",
+        "outputPath": "C:\\Users\\mearn\\Source\\Repos\\Fall2022\\321Group9Project\\api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mearn\\AppData\\Roaming\\NuGet\\NuGet.Config"

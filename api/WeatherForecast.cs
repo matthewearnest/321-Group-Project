@@ -1,4 +1,4 @@
-namespace _321_Group_Project;
+namespace api;
 
 public class WeatherForecast
 {
@@ -10,4 +10,3 @@ public class WeatherForecast
 
     public string? Summary { get; set; }
 }
-
