@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/bellakimbrell/Documents/SCHOOL/MIS321/GROUP PROJECT BOOK BIN/usefolder/321-Group-Project/api/api.csproj": {}
+    "/Users/bellakimbrell/Documents/SCHOOL/GROUP_PROJECT/321-Group-Project/api/api.csproj": {}
   },
   "projects": {
-    "/Users/bellakimbrell/Documents/SCHOOL/MIS321/GROUP PROJECT BOOK BIN/usefolder/321-Group-Project/api/api.csproj": {
+    "/Users/bellakimbrell/Documents/SCHOOL/GROUP_PROJECT/321-Group-Project/api/api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/bellakimbrell/Documents/SCHOOL/MIS321/GROUP PROJECT BOOK BIN/usefolder/321-Group-Project/api/api.csproj",
+        "projectUniqueName": "/Users/bellakimbrell/Documents/SCHOOL/GROUP_PROJECT/321-Group-Project/api/api.csproj",
         "projectName": "api",
-        "projectPath": "/Users/bellakimbrell/Documents/SCHOOL/MIS321/GROUP PROJECT BOOK BIN/usefolder/321-Group-Project/api/api.csproj",
+        "projectPath": "/Users/bellakimbrell/Documents/SCHOOL/GROUP_PROJECT/321-Group-Project/api/api.csproj",
         "packagesPath": "/Users/bellakimbrell/.nuget/packages/",
-        "outputPath": "/Users/bellakimbrell/Documents/SCHOOL/MIS321/GROUP PROJECT BOOK BIN/usefolder/321-Group-Project/api/obj/",
+        "outputPath": "/Users/bellakimbrell/Documents/SCHOOL/GROUP_PROJECT/321-Group-Project/api/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/bellakimbrell/.nuget/NuGet/NuGet.Config"
@@ -49,6 +49,10 @@
             "System.Data.SQLite.Core": {
               "target": "Package",
               "version": "[1.0.116, )"
+            },
+            "mysql.data": {
+              "target": "Package",
+              "version": "[8.0.31, )"
             }
           },
           "imports": [
