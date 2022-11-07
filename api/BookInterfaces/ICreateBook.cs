@@ -3,6 +3,6 @@ namespace api.BookInterfaces
 {
     public interface ICreateBook
     {
-        public void CreateBook(Book value)
+        public void NewCreateBook(Book value)
 ;    }
 }
