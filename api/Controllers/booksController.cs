@@ -4,6 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using api.BookDatabase;
+using api.BookInterfaces;
+using api.BookModels;
+using api.Controllers;
+using Microsoft.AspNetCore.Cors;
 
 namespace api.Controllers
 {
@@ -12,35 +17,48 @@ namespace api.Controllers
     public class booksController : ControllerBase
     {
         // GET: api/books
+        [EnableCors("OpenPolicy")]
         [HttpGet]
-        public IEnumerable<string> Get()
+        public List<Book> Get()
         {
-            return new string[] { "value1", "value2" };
+            IGetAllBooks readObject = new ReadAllBooksData();
+            return readObject.GetAllBooks();
         }
 
         // GET: api/books/5
+        [EnableCors("OpenPolicy")]
         [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
+        public Book Get(Book value)
         {
-            return "value";
+            IGetBook readObject = new ReadBookData();
+            return readObject.GetBook(value);
         }
 
         // POST: api/books
+        [EnableCors("OpenPolicy")]
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post(Book value)
         {
+            ICreateBook createObject = new CreateBook();
+            createObject.NewCreateBook(value);
         }
 
         // PUT: api/books/5
+        [EnableCors("OpenPolicy")]
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public void Put([FromBody] Book value)
         {
+            IEditBook editBook = new EditBook();
+            editBook.EditMyBook(value);
         }
 
         // DELETE: api/books/5
+        [EnableCors("OpenPolicy")]
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public void Delete(Book value)
         {
+            IDeleteBook deleteBook = new DeleteBook();
+            deleteBook.DeleteMyBook(value);
         }
     }
 }
