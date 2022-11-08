@@ -117,7 +117,7 @@ a:hover {
 
 .container .login form [type='submit'],
 .container .register form [type='submit'] {
-  background-color: #2ecc71;
+  background-color: #2e70cc;
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0 20px;
   outline: none;
@@ -191,12 +191,11 @@ a:hover {
 }
 </style>
 </head>
-<body>
+<body onload = loginOnLoad(); style = "background-color: lightblue;">
 
-<div class="container">
+<div class ="container">
     <input type="radio" class="login-radio" name="login_registration" id="login" checked>
     <input type="radio" class="reg-radio" name="login_registration" id="signUp">
-
     <div class="login">
         <h1 class="title">Sign in</h1>
         <form action="" method="POST">
@@ -260,8 +259,10 @@ a:hover {
 
 
 </div>
+<div style = "text-align: center;">
+  <a href = "search.html">Bypass Login</a>
+</div>
 
-<a href = "search.html">Bypass Login</a>
 
 </body>
 </html>

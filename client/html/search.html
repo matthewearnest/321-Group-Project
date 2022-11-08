@@ -6,14 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search/Homepage</title>
 </head>
-<body>
-    <h1>Search</h1>
+<body onload = searchOnLoad(); style = "background-color: lightblue;">
+    <h1>Book Bin</h1>
 
+    
+<div style = "text-align: center;">
     <form action = "search.html" method = "POST">
-        <input type = "text" name = "search" placeholder = "Search for a book">
+        <input type = "text" size="80" name = "search" placeholder = "Search for a book">
         <input type = "submit" value = "Search">
+    </form>
+</div>
+
+    
+    <div style = "text-align: center; position: fixed; bottom: 20px; right: 300px;">
+        <a href = "ordercompleted.html">Test completed transaction</a>
+    </div>
+
+    <div style = "text-align: center; position: relative; top: 100px;">
+        <a href = "partners.html">View our Partners</a>
+    </div>
+
+    <div style = "text-align: center; position: relative; top: 200px;">
+        <a href = "login.html">Log out</a>
+    </div>
+
+    <img src="images/booklogo.png" width="100" height="150"; style = "position: fixed; top: 10px; right: 10px;">
+
+
         
-    <a href = "ordercompleted.html">Test completed transaction</a>
-    <a href = "partners.html">View our Partners</a>
+   
+
+    <div>
+        
+    </div>
+    
 </body>
 </html>

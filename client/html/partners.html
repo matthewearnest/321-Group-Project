@@ -6,19 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body onload = partnerOnLoad()>
+<body onload = partnerOnLoad(); style = "background-color: lightblue; text-align: center;">
 
     <div id = "partner"></div>
     
-    <p>placeholder text for book bin partners.</p>
-    
-    <a href = "https://amazon.com">Amazon</a>
-    <a href = "https://www.barnesandnoble.com/">Barnes and Noble</a>
-    <a href = "https://www.booksamillion.com/">Books a Million</a>
+    <p>Shop with our partners!</p>
+    <div style = "position: relative; top: 100px;  text-align: center;">
+        <h1><a href = "https://amazon.com">Amazon</a></h1>
+        <img src = "images/amazon.png" width = "200" height = "200">
+    </div>
+
+    <div style = "position: relative; top: 250px;  text-align: center;">
+        <h1><a href = "https://www.barnesandnoble.com/">Barnes and Noble</a></h1>
+        <img src = "images/barnesandnoble.png" width = "200" height = "200">
+    </div>
+
+    <div style = "position: relative; top: 400px;  text-align: center;">
+        <h1><a href = "https://www.booksamillion.com/">Books a Million</a></h1>
+        <img src = "images/booksamillion.jpg" width = "200" height = "200">
+    </div>
 
     <script src = partner.js></script>
 
-    <a href = "search.html">Return home</a>
+    <div style = "position: fixed; top: 50px; text-align: left;">
+        <a href = "search.html">Back</a>
+    </div>
+
     
 </body>
 </html>
