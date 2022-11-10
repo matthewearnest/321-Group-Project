@@ -28,10 +28,10 @@ namespace api.Controllers
         // GET: api/books/5
         [EnableCors("OpenPolicy")]
         [HttpGet("{id:int}", Name = "Gets")]
-        public Book Get(int id)
+        public Book Get(Book value)
         {
             IGetBook readObject = new ReadBookData();
-            return readObject.GetBook(id);
+            return readObject.GetBook(value);
         }
 
         // POST: api/books

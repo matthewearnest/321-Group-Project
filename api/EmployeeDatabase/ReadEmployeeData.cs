@@ -7,7 +7,7 @@ namespace api.EmployeeDatabase
 {
     public class ReadEmployeeData : IGetEmployee
     {
-        public Employee GetEmployee(int id)
+        public Employee GetEmployee(Employee value)
         {
             
             string cs = @"mysql://sifctgglmb98l2ns:p20bsk98rfgzhjmr@migae5o25m2psr4q.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/f6546l75wjqbfhwv";
@@ -16,7 +16,7 @@ namespace api.EmployeeDatabase
 
             string stm = "SELECT * FROM employee WHERE employee_username = @employee_username";
             using var cmd = new MySqlCommand(stm, con);
-            cmd.Parameters.AddWithValue("@employee_username", id);
+            cmd.Parameters.AddWithValue("@employee_username", value.EmployeeUsername);
             cmd.Prepare();
             using MySqlDataReader rdr = cmd.ExecuteReader();
             con.Close();

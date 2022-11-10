@@ -3,6 +3,6 @@ namespace api.EmployeeInterfaces
 {
     public interface IGetEmployee
     {
-         Employee GetEmployee(int id);
+         Employee GetEmployee(Employee value);
     }
 }
