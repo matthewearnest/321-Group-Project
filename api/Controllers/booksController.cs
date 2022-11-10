@@ -27,7 +27,7 @@ namespace api.Controllers
 
         // GET: api/books/5
         [EnableCors("OpenPolicy")]
-        [HttpGet("{id}", Name = "Get")]
+        [HttpGet("{id:int}", Name = "Gets")]
         public Book Get(int id)
         {
             IGetBook readObject = new ReadBookData();

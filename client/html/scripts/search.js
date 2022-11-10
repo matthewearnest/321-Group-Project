@@ -7,7 +7,8 @@ function searchOnLoad() {
 
 function search_book() {
 	let input = document.getElementById('searchbar').value
-	input=input.toLowerCase();
+	input=input.toLowerCase()
+	const url = "https://localhost:7258/api/books";
 	let x = document.getElementsByClassName('animals');
 	
 	for (i = 0; i < x.length; i++) {
@@ -19,3 +20,5 @@ function search_book() {
 		}
 	}
 }
+
+
