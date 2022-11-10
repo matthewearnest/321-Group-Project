@@ -3,6 +3,6 @@ namespace api.BookInterfaces
 {
     public interface IGetBook
     {
-         Book GetBook(Book value);
+         Book GetBook(int id);
     }
 }

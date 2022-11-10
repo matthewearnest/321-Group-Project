@@ -28,10 +28,10 @@ namespace api.Controllers
         // GET: api/employee/5
         [EnableCors("OpenPolicy")]
         [HttpGet("{id}", Name = "Get")]
-        public Employee Get(Employee value)
+        public Employee Get(int id)
         {
             IGetEmployee readObject = new ReadEmployeeData();
-            return readObject.GetEmployee(value);
+            return readObject.GetEmployee(id);
         }
 
         // POST: api/employee

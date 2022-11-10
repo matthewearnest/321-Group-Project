@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>Search/Homepage</title>
+</head>
+<style>
+    body {
+      font-family: "Lato", sans-serif;
+    }
+    
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+    
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.2s;
+    }
+    
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+    
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+    
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
+    </style>
+
+
+
+<body onload = searchOnLoad(); style = "background-color: lightblue;">
+    
+
+    <div class="jumbotron">
+        <div class="p-5 mb-4 bg-secondary">
+            <h1 class="display-5 fw-bold"; style = "text-align: center;">Book Bin Transaction App</h1>
+        </div>
+    
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href = "ordercompleted.html">Test completed transaction</a>
+            <a href = "partners.html">View our Partners</a>
+            <a href = "login.html">Log out</a>
+            <a href = "salesreports.html">View Sales Reports</a>
+            <a href = "addemployee.html">Add New Employee</a>
+          </div>
+          
+          <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+          
+          <script>
+          function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+          }
+          
+          function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+          }
+          </script>
+
+<div style = "text-align: center;">
+    <form action = "search.html" method = "POST">
+        <input type = "text" size="80" name = "search" id = "searchbar" placeholder = "Search for a book">
+        <input type = "submit" value = "Search">
+    </form>
+</div>
+
+    <h1 style = "position: fixed; top: 10px; left: 10px;">ADMIN</h1>
+
+    <img src="images/booklogo-removebg-preview.png" width="100" height="125"; style = "position: fixed; top: 10px; right: 10px;">
+
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    
+</body>
+</html>

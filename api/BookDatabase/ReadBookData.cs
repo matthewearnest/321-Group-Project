@@ -7,7 +7,7 @@ namespace api.BookDatabase
 {
     public class ReadBookData : IGetBook
     {
-        public Book GetBook(Book value)
+        public Book GetBook(int id)
         {
             string cs = @"mysql://sifctgglmb9812ns:p20bsk98rfgzhjmr@migae5o25m2psr4q.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/f6546175wjqbfhwv";
             using var con = new MySqlConnection(cs);
@@ -15,7 +15,7 @@ namespace api.BookDatabase
 
             string stm = "SELECT * FROM book WHERE title = @title";
             using var cmd = new MySqlCommand(stm, con);
-            cmd.Parameters.AddWithValue("@title", value);
+            cmd.Parameters.AddWithValue("@title", id);
             cmd.Prepare();
             using MySqlDataReader rdr = cmd.ExecuteReader();
             con.Close();
