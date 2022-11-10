@@ -19,7 +19,7 @@ namespace api.Controllers
         // GET: api/books
         [EnableCors("OpenPolicy")]
         [HttpGet]
-        public List<Book> Get()
+        public List<Book> Gets()
         {
             IGetAllBooks readObject = new ReadAllBooksData();
             return readObject.GetAllBooks();
@@ -27,7 +27,7 @@ namespace api.Controllers
 
         // GET: api/books/5
         [EnableCors("OpenPolicy")]
-        [HttpGet("{id:int}", Name = "Gets")]
+        [HttpGet(Name = "Gets")]
         public Book Get(Book value)
         {
             IGetBook readObject = new ReadBookData();
@@ -45,7 +45,7 @@ namespace api.Controllers
 
         // PUT: api/books/5
         [EnableCors("OpenPolicy")]
-        [HttpPut("{id}")]
+        [HttpPut]
         public void Put([FromBody] Book value)
         {
             IEditBook editBook = new EditBook();
@@ -54,7 +54,7 @@ namespace api.Controllers
 
         // DELETE: api/books/5
         [EnableCors("OpenPolicy")]
-        [HttpDelete("{id}")]
+        [HttpDelete]
         public void Delete(Book value)
         {
             IDeleteBook deleteBook = new DeleteBook();
