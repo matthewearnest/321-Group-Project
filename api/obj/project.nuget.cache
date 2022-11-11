@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "A+4qP4t2sAg13WL6+xBKfgAI7egt63tV88WvWNNLrBUMv1KmwJkqAuWCpo3zvfAGj6vhLuhDgRyH2lDH32hZQA==",
+  "dgSpecHash": "1Uy42C/+RQTcUtP2Zwfkf+yC8We6ov2EUmUlqYNVfdu34nYViiiGRcpIFSqdVBIkxbHE+UhoRPwhq6W9SDDQOw==",
   "success": true,
   "projectFilePath": "/Users/bellakimbrell/Documents/SCHOOL/GROUP_PROJECT/321-Group-Project/api/api.csproj",
   "expectedPackageFiles": [
+    "/Users/bellakimbrell/.nuget/packages/fly.sql/1.0.7/fly.sql.1.0.7.nupkg.sha512",
     "/Users/bellakimbrell/.nuget/packages/google.protobuf/3.19.4/google.protobuf.3.19.4.nupkg.sha512",
     "/Users/bellakimbrell/.nuget/packages/humanizer.core/2.2.0/humanizer.core.2.2.0.nupkg.sha512",
     "/Users/bellakimbrell/.nuget/packages/k4os.compression.lz4/1.2.6/k4os.compression.lz4.1.2.6.nupkg.sha512",
