@@ -9,12 +9,13 @@ namespace api
 
         public ConnectionString(){
             string host = "migae5o25m2psr4q.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
-            string database = "f6546175wjqbfhwv";
+            string database = "f6546l75wjqbfhwv";
             string port = "3306";
-            string userName = "sifctgglmb9812ns";
-            string password = "p20bsk98rfgzhjmr";
+            string userName = "sifctgglmb98l2ns";
+            string password = "yt2gytudrngo7x2p";
 
-            cs = $@"hots = {host}; userName = {userName}; database = {database}; port = {port}; password = {password};";
+            cs = $"server={host};port={port};database={database};user={userName};password={password}";
+            // cs = "mysql://sifctgglmb98l2ns:yt2gytudrngo7x2p@migae5o25m2psr4q.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/f6546l75wjqbfhwv";
         }
     }
 }

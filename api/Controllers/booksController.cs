@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Mvc;
 using api.BookDatabase;
 using api.BookInterfaces;
 using api.BookModels;
-using api.Controllers;
 using Microsoft.AspNetCore.Cors;
 
 namespace api.Controllers
