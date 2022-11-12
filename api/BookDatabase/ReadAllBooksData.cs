@@ -11,21 +11,42 @@ namespace api.BookDatabase
         {
             ConnectionString myConnection = new ConnectionString();
             string cs = myConnection.cs;
-
             using var con = new MySqlConnection(cs);
-            con.Open();
+            try
+            {
+                con.Open();
 
-            string stm = "SELECT * from book";
-            using var cmd = new MySqlCommand(stm, con);
+                string stm = "SELECT * from book";
+                using var cmd = new MySqlCommand(stm, con);
 
-            using MySqlDataReader rdr = cmd.ExecuteReader();
+                MySqlDataReader rdr = cmd.ExecuteReader();
 
-            List<Book> allBooks = new List<Book>();
-            while(rdr.Read()){
-                allBooks.Add(new Book(){Isn = rdr.GetInt32(0), Condition = rdr.GetString(1), Title = rdr.GetString(2), Author = rdr.GetString(3), NumberCopies = rdr.GetInt32(4), Barcode = rdr.GetString(5), OrderItemizedId = rdr.GetInt32(6)});
+                List<Book> allBooks = new List<Book>();
+                while (rdr.Read())
+                {
+                    Console.WriteLine(rdr.GetInt32(0));
+                    allBooks.Add(new Book()
+                    {
+                        Isn = rdr.GetInt32(0),
+                        Condition = rdr.GetString(1),
+                        Author = rdr.GetString(2),
+                        NumberCopies = rdr.GetInt32(3),
+                        Title = rdr.GetString(4),
+                        Barcode = rdr.GetString(5),
+                        OrderItemizedId = rdr.GetInt32(6)
+                    });
+                }
+                return allBooks;
             }
-            con.Close();
-            return allBooks;
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return new List<Book>();
+            }
+            finally
+            {
+                con.Close();
+            }
         }
     }
 }

@@ -1,5 +1,5 @@
 // JavaScript code
-
+const url = "https://localhost:7258/api/books";
 function searchOnLoad() {
     document.getElementById('searchbar').addEventListener('keyup', search_book);
 }

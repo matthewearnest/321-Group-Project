@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "api/1.0.0": {
         "dependencies": {
+          "Fly.SQL": "1.0.7",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.10",
           "Swashbuckle.AspNetCore": "6.2.3",
           "System.Data.SQLite.Core": "1.0.116",
@@ -15,6 +16,17 @@
         },
         "runtime": {
           "api.dll": {}
+        }
+      },
+      "Fly.SQL/1.0.7": {
+        "dependencies": {
+          "MySql.Data": "8.0.31"
+        },
+        "runtime": {
+          "lib/net6.0/FlySQL.dll": {
+            "assemblyVersion": "1.0.7.0",
+            "fileVersion": "1.0.7.0"
+          }
         }
       },
       "Google.Protobuf/3.19.4": {
@@ -2155,6 +2167,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Fly.SQL/1.0.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6wufNfWhNDCJC/xveHiopz0ZBf6Yy5i4NpFEbz5aJF2FCF6rYTk9wm4oHguefAm8yEcTEV7pfAG9HVEg6Qi6Iw==",
+      "path": "fly.sql/1.0.7",
+      "hashPath": "fly.sql.1.0.7.nupkg.sha512"
     },
     "Google.Protobuf/3.19.4": {
       "type": "package",

@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Mvc;
 using api.BookDatabase;
 using api.BookInterfaces;
 using api.BookModels;
-using api.Controllers;
 using Microsoft.AspNetCore.Cors;
 
 namespace api.Controllers
@@ -27,16 +26,16 @@ namespace api.Controllers
 
         // GET: api/books/5
         [EnableCors("OpenPolicy")]
-        [HttpGet("{id:int}", Name = "Gets")]
-        public Book Get(int id)
+        [HttpGet("{value}" , Name = "Gets")]
+        public Book Get(Book value)
         {
             IGetBook readObject = new ReadBookData();
-            return readObject.GetBook(id);
+            return readObject.GetBook(value);
         }
 
         // POST: api/books
         [EnableCors("OpenPolicy")]
-        [HttpPost]
+        [HttpPost (Name = "PostBooks")]
         public void Post(Book value)
         {
             ICreateBook createObject = new CreateBook();
@@ -45,7 +44,7 @@ namespace api.Controllers
 
         // PUT: api/books/5
         [EnableCors("OpenPolicy")]
-        [HttpPut("{id}")]
+        [HttpPut (Name = "PutBooks")]
         public void Put([FromBody] Book value)
         {
             IEditBook editBook = new EditBook();
@@ -54,7 +53,7 @@ namespace api.Controllers
 
         // DELETE: api/books/5
         [EnableCors("OpenPolicy")]
-        [HttpDelete("{id}")]
+        [HttpDelete]
         public void Delete(Book value)
         {
             IDeleteBook deleteBook = new DeleteBook();

@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "Fly.SQL/1.0.7": {
+        "type": "package",
+        "dependencies": {
+          "MySql.Data": "8.0.28"
+        },
+        "compile": {
+          "lib/net6.0/FlySQL.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/FlySQL.dll": {}
+        }
+      },
       "Google.Protobuf/3.19.4": {
         "type": "package",
         "compile": {
@@ -3304,6 +3316,19 @@
     }
   },
   "libraries": {
+    "Fly.SQL/1.0.7": {
+      "sha512": "6wufNfWhNDCJC/xveHiopz0ZBf6Yy5i4NpFEbz5aJF2FCF6rYTk9wm4oHguefAm8yEcTEV7pfAG9HVEg6Qi6Iw==",
+      "type": "package",
+      "path": "fly.sql/1.0.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fly.sql.1.0.7.nupkg.sha512",
+        "fly.sql.nuspec",
+        "lib/net6.0/FlySQL.dll",
+        "logo.png"
+      ]
+    },
     "Google.Protobuf/3.19.4": {
       "sha512": "fd07/ykL4O4FhqrZIELm5lmiyOHfdPg9+o+hWr6tcfRdS7tHXnImg/2wtogLzlW2eEmr0J7j6ZrZvaWOLiJbxQ==",
       "type": "package",
@@ -9453,6 +9478,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Fly.SQL >= 1.0.7",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.10",
       "Swashbuckle.AspNetCore >= 6.2.3",
       "System.Data.SQLite.Core >= 1.0.116",
@@ -9496,6 +9522,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "Fly.SQL": {
+            "target": "Package",
+            "version": "[1.0.7, )"
+          },
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[6.0.10, )"

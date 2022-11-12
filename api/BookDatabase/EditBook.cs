@@ -15,9 +15,8 @@ namespace api.BookDatabase
             using var con = new MySqlConnection(cs);
             con.Open();
 
-            string stm = @"UPDATE book SET isn = @isn, num_of_copies = @num_of_copies where title = @title";
+            string stm = @"UPDATE book SET num_of_copies = @num_of_copies where title = @title";
             using var cmd = new MySqlCommand(stm, con);
-            cmd.Parameters.AddWithValue("@isn", value.Isn);
             cmd.Parameters.AddWithValue("@num_of_copies", value.NumberCopies);
             cmd.Parameters.AddWithValue("@title", value.Title);
 

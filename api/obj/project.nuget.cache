@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "c+AHC4oeE93FVil+6qBdR0A71YpN2Ph/vAbcgDiKl/cXX3RmwV4Drgjhy9tJBLuWfY4iKPxo153q+qzZXUHcyA==",
+  "dgSpecHash": "QvUThGWHVfOAoCQEQ+ZbFiSgVqOM8IxeP+KVcLikwpHTxmpCYvB4eMLxEYfPGtoCQxDGJ/g4cOsHAXDuJsWYuA==",
   "success": true,
   "projectFilePath": "C:\\Users\\mearn\\Source\\Repos\\Fall2022\\321Group9Project\\321-Group-Project\\api\\api.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\mearn\\.nuget\\packages\\fly.sql\\1.0.7\\fly.sql.1.0.7.nupkg.sha512",
     "C:\\Users\\mearn\\.nuget\\packages\\google.protobuf\\3.19.4\\google.protobuf.3.19.4.nupkg.sha512",
     "C:\\Users\\mearn\\.nuget\\packages\\humanizer.core\\2.2.0\\humanizer.core.2.2.0.nupkg.sha512",
     "C:\\Users\\mearn\\.nuget\\packages\\k4os.compression.lz4\\1.2.6\\k4os.compression.lz4.1.2.6.nupkg.sha512",

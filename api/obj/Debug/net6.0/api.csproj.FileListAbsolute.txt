@@ -499,6 +499,7 @@ C:\Users\mearn\Source\Repos\Fall2022\321Group9Project\321-Group-Project\api\bin\
 C:\Users\mearn\Source\Repos\Fall2022\321Group9Project\321-Group-Project\api\bin\Debug\net6.0\api.runtimeconfig.json
 C:\Users\mearn\Source\Repos\Fall2022\321Group9Project\321-Group-Project\api\bin\Debug\net6.0\api.dll
 C:\Users\mearn\Source\Repos\Fall2022\321Group9Project\321-Group-Project\api\bin\Debug\net6.0\api.pdb
+C:\Users\mearn\Source\Repos\Fall2022\321Group9Project\321-Group-Project\api\bin\Debug\net6.0\FlySQL.dll
 C:\Users\mearn\Source\Repos\Fall2022\321Group9Project\321-Group-Project\api\bin\Debug\net6.0\Google.Protobuf.dll
 C:\Users\mearn\Source\Repos\Fall2022\321Group9Project\321-Group-Project\api\bin\Debug\net6.0\Humanizer.dll
 C:\Users\mearn\Source\Repos\Fall2022\321Group9Project\321-Group-Project\api\bin\Debug\net6.0\K4os.Compression.LZ4.dll

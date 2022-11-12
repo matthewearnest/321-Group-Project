@@ -74,7 +74,7 @@ a:hover {
   font-weight: normal;
 }
 
-.container .login form input[type='email'],
+.container .login form input[type='username'],
 .container .login form input[type='password'],
 .container .login form input[type='text'],
 .container .login form input[type='date'],
@@ -95,7 +95,7 @@ a:hover {
   
 }
 
-.container .login form input[type='email']:focus,
+.container .login form input[type='username']:focus,
 .container .login form input[type='password']:focus,
 .container .login form input[type='text']:focus,
 .container .login form input[type='date']:focus,
@@ -202,8 +202,8 @@ a:hover {
         <h1 class="title">Sign in</h1>
         <form action="" method="POST">
             <div class="input-control">
-                <label for="email">Email</label>
-                <input type="email" id="email" placeholder="your@email.com" required>
+                <label for="username">Username</label>
+                <input type="username" id="username" placeholder="enter username" required>
             </div>
 
             <div class="input-control">
@@ -212,7 +212,7 @@ a:hover {
             </div>
 
             <div class="input-control">
-                <button type="submit">Sign in</button>
+                <button id = "loginButton" type="submit">Sign in</button>
             </div>
         </form>
 
@@ -269,7 +269,7 @@ a:hover {
   <a href = "adminsearch.html">Go to Admin Page</a>
 </div>
 
-<script src = "login.js"></script>
+<script src = "scripts/login.js"></script>
 
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
