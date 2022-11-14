@@ -9571,7 +9571,11 @@
       "code": "Undefined",
       "level": "Warning",
       "warningLevel": 1,
+<<<<<<< HEAD
       "message": "Problem reading the cache file C:\\Users\\mearn\\Source\\Repos\\Fall2022\\321Group9Project\\321-Group-Project\\api\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+=======
+      "message": "Problem reading the cache file /Users/bellakimbrell/Documents/SCHOOL/GROUP_PROJECT/321-Group-Project/api/obj/project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+>>>>>>> 02505891693801ee41db61d7bebc49dc61fab11f
     }
   ]
 }
