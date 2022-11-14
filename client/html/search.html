@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href = "css/search.css" rel = "stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <title>Search/Homepage</title>
 </head>
 <style>
     body {
       font-family: "Lato", sans-serif;
+      height: 100vh;
+      background: linear-gradient(to right, lightblue 0%, lightblue 70%, violet 80%, violet 80%);
     }
     
     .sidenav {
@@ -82,11 +85,29 @@
           </script>
 
 <div style = "text-align: center;">
-    <form action = "search.html" method = "POST">
+    
         <input type = "text" size="80" name = "search" id = "searchbar" placeholder = "Search for a book">
         <input type = "submit" value = "Search">
-    </form>
+   
 </div>
+
+<button id = "filter" style = "position: fixed; top: 200px; text-align: center; right: 100px;" >Filter Results</button>
+
+</div>
+<div id="buttons"; style = "position: relative;">
+  <button style = "position: fixed; top: 250px; text-align: center; right: 200px;" class="button-value" onclick="filterProduct('all')">All</button>
+  <button style = "position: fixed; top: 250px; text-align: center; right: 50px;"class="button-value" onclick="filterProduct('Like New')">
+    Like New
+  </button>
+  <button style = "position: fixed; top: 325px; text-align: center; right: 180px;"class="button-value" onclick="filterProduct('Good')">
+    Good
+  </button>
+  <button style = "position: fixed; top: 325px; text-align: center; right: 50px;"class="button-value" onclick="filterProduct('Ok')">
+    Ok
+  </button>
+  <button style = "position: fixed; top: 400px; text-align: center; right: 180px;" class="button-value" onclick="filterProduct('Poor')">
+    Poor
+  </button>
 
 
     <img src="images/booklogo-removebg-preview.png" width="100" height="125"; style = "position: fixed; top: 10px; right: 10px;">

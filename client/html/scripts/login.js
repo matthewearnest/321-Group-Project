@@ -35,7 +35,7 @@ function newLogin(){
     
         if (username === "bellaKimbrell" && password === "bella") {
             alert("You have successfully logged in.");
-            window.location.href = "file:///C:/Users/mearn/Source/Repos/Fall2022/321Group9Project/321-Group-Project/client/html/search.html";
+            window.location.href = "file:///C:/Users/mearn/Source/Repos/Fall2022/321Group9Project/321-Group-Project/client/html/adminsearch.html";
         } else {
             loginErrorMsg.style.opacity = 1;
         }
