@@ -34,9 +34,15 @@ function newLogin(){
         const password = document.getElementById("password").value;
     
         if (username === "bellaKimbrell" && password === "bella") {
+            var empid = 23;
             alert("You have successfully logged in.");
             window.location.href = "file:///C:/Users/mearn/Source/Repos/Fall2022/321Group9Project/321-Group-Project/client/html/adminsearch.html";
-        } else {
+        } else if(username === "matthewEarnest" && password === "matthew") {
+            var empid = 23;
+            alert("You have successfully logged in.");
+            window.location.href = "file:///C:/Users/mearn/Source/Repos/Fall2022/321Group9Project/321-Group-Project/client/html/search.html";
+        }
+        else {
             loginErrorMsg.style.opacity = 1;
         }
     }
@@ -82,8 +88,8 @@ function signup() {
     signupRequest.open("POST", "/signup");
     signupRequest.setRequestHeader("Content-Type", "application/json");
     signupRequest.send(JSON.stringify({
-        username: username,
-        password: password
+        EmployeeUsername: username,
+        EmployeePassword: password
     }));
     signupRequest.onload = function() {
         if (signupRequest.status === 200) {

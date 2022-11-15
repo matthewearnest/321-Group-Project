@@ -57,12 +57,12 @@
 
 
 
-<body onload = searchOnLoad(); style = "background-color: lightblue;">
+<body onload = getBooks(); style = "background-color: lightblue;">
     
 
     <div class="jumbotron">
         <div class="p-5 mb-4 bg-secondary">
-            <h1 class="display-5 fw-bold"; style = "text-align: center;">Book Bin Transaction App</h1>
+            <h1 class="display-5 fw-bold"; style = "text-align: center; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Book Bin Transaction App</h1>
         </div>
     
         <div id="mySidenav" class="sidenav">
@@ -90,6 +90,13 @@
         <input type = "submit" value = "Search">
    
 </div>
+
+<div class="search-wrapper">
+  <label for="search">Search Books</label>
+  <input type="search" id="search" data-search />
+</div>
+
+
 
 <button id = "filter" style = "position: fixed; top: 200px; text-align: center; right: 100px;" >Filter Results</button>
 
