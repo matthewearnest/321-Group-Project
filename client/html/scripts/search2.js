@@ -32,17 +32,35 @@ const renderBookCards = () => {
   let html = "";
   masterBookList.forEach((bookData) => {
     html = `
-      <a href="#${bookData.Id}" style="color: 'black', ">
-    <div class="card" style="width: 18rem;">
+    <div class="card" style="width: 60rem; left: 10px" onclick = setStorageData()>
       <div class="card-body">
         <h5 class="card-title">${bookData.title}</h5>
-        <p class="card-text">${bookData.author}</p>
+        
       </div>
     </div>
       `;
+      
   });
   bookContainer.innerHTML = html;
 };
+
+
+function setStorageData(bookData) {
+  console.log('made it');
+  
+  window.localStorage.setItem("bookData.title", JSON.stringify(bookData));
+  window.localStorage.setItem("bookData.author", JSON.stringify(bookData));
+  window.localStorage.setItem("bookData.condition", JSON.stringify(bookData));
+  window.localStorage.setItem("bookData.isbn", JSON.stringify(bookData));
+  window.localStorage.setItem("bookData.numbercopies", JSON.stringify(bookData));
+  
+  console.log(bookData.title);
+  window.location.assign("file:///C:/Users/mearn/Source/Repos/Fall2022/321Group9Project/321-Group-Project/client/html/bookselected.html");
+  
+}
+function Go(){
+  window.location.href("file:///C:/Users/mearn/Source/Repos/Fall2022/321Group9Project/321-Group-Project/client/html/bookselected.html");
+}
 
 function searchBooks() {
   searchInput.addEventListener("input", (e) => {
