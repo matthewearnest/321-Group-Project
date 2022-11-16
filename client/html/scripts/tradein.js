@@ -31,7 +31,6 @@ function putBook(isn){
         author: document.getElementById("bookAuthor").value,
         genre: document.getElementById("bookCondition").value,
         numberCopies: parseInt(document.getElementById("numberCopies").value),
-        isbn: document.getElementById("bookIsbn").value,
         //length: parseInt(document.getElementById("bookLength").value),
         //cover: document.getElementById("bookCover").value
     }
@@ -75,6 +74,25 @@ function postBook(){
         populateList();
         blankFields();
     });
+}
+
+
+function setBookPrice(){
+    var price = 0;
+    if(myBook.condition == "Like New"){
+        price = 50;
+    }
+    else if(myBook.condition == "Gently Used"){
+        price = 25;
+    }
+    else if(myBook.condition == "Worn"){
+        price = 10;
+    }
+    else{
+        price = 5;
+    }
+    localStorage.setItem("price", price);
+    console.log(price);
 }
 
 function deleteBook(){
@@ -176,6 +194,7 @@ function handleNewSave(){
 
 function completeTransaction()
 {
+    alert("Trade in successful.");
     window.location.assign("file:///C:/Users/mearn/Source/Repos/Fall2022/321Group9Project/321-Group-Project/client/html/ordercompleted.html");
 }
 
