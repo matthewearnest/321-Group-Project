@@ -21,7 +21,7 @@ namespace api.EmployeeDatabase
             using MySqlDataReader rdr = cmd.ExecuteReader();
             con.Close();
             rdr.Read();
-            return new Employee(){EmployeeUsername = rdr.GetString(0), EmployeePassword = rdr.GetString(1), FirstName = rdr.GetString(2), LastName = rdr.GetString(3), IsAdmin = rdr.GetBoolean(4)};
+            return new Employee(){EmployeeID = rdr.GetInt32(0), EmployeeUsername = rdr.GetString(1), EmployeePassword = rdr.GetString(2), FirstName = rdr.GetString(3), LastName = rdr.GetString(4), IsAdmin = rdr.GetBoolean(5)};
         }
     }
 }
