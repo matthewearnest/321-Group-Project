@@ -15,9 +15,9 @@ namespace api.EmployeeDatabase
             using var con = new MySqlConnection(cs);
             con.Open();
 
-            string stm = @"UPDATE employee SET employee_username = @employee_username where employee_username = @employee_username";
+            string stm = @"UPDATE employee SET employee_id = @employee_id where employee_id = @employee_id";
             using var cmd = new MySqlCommand(stm, con);
-            cmd.Parameters.AddWithValue("@employee_username", value.EmployeeUsername);
+            cmd.Parameters.AddWithValue("@employee_username", value.EmployeeID);
 
             cmd.Prepare();
             cmd.ExecuteNonQuery();
