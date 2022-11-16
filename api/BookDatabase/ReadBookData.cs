@@ -20,7 +20,7 @@ namespace api.BookDatabase
             using MySqlDataReader rdr = cmd.ExecuteReader();
             con.Close();
             rdr.Read();
-            return new Book(){Isn = rdr.GetInt32(0), Condition = rdr.GetString(1), Title = rdr.GetString(2), Author = rdr.GetString(3), NumberCopies = rdr.GetInt32(4), Barcode = rdr.GetString(5), OrderItemizedId = rdr.GetInt32(6)};
+            return new Book(){Isn = rdr.GetInt32(0), Condition = rdr.GetString(1), Price = rdr.GetDouble(2), Title = rdr.GetString(3), Author = rdr.GetString(4), NumberCopies = rdr.GetInt32(5), Barcode = rdr.GetString(6), OrderItemizedId = rdr.GetInt32(7)};
         }
     }
 }
