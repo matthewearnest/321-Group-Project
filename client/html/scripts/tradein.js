@@ -1,19 +1,19 @@
 const cwid = "12052267";
 const baseUrl = "https://pa6-backend.herokuapp.com/api/books/"+cwid;
-var employeeList = [];
-var myEmployee = {};
-const employeesURL = "https://localhost:7258/api/employee";
+var bookList = [];
+var myBook = {};
+const booksURL = "https://localhost:7258/api/books";
 
 function populateList(){
 
     
-    fetch(employeesURL).then(function(response){
+    fetch(booksURL).then(function(response){
         return response.json();
     }).then(function(json){
-        employeeList = json;
+        bookList = json;
         let html = "<select class = \"listBox\" onchange = \"handleOnChange()\" id= \"selectListBox\" name = \"list_box\" size=5 width=\"100%\">";
-        json.forEach((employee)=>{
-            html += "<option value = " + employee.id  + ">" + employee.username + "</option>";
+        json.forEach((book)=>{
+            html += "<option value = " + book.isn  + ">" + book.title + "</option>";
         })
         html += "</select>";
         document.getElementById("listBox").innerHTML = html;
@@ -23,25 +23,28 @@ function populateList(){
     hideButtons();
 }
 
-function putBook(id){
-    const putEmployeeApiUrl = employeesURL + "/"+id;
-    const sendEmployee = {
-        id: id,
-        username: document.getElementById("empUsername").value,
-        author: document.getElementById("empPassword").value,
-        id: document.getElementById("empId").value,
-        
+function putBook(isn){
+    const putBookApiUrl = booksURL + "/"+isn;
+    const sendBook = {
+        isn: isn,
+        title: document.getElementById("bookTitle").value,
+        author: document.getElementById("bookAuthor").value,
+        genre: document.getElementById("bookCondition").value,
+        numberCopies: parseInt(document.getElementById("numberCopies").value),
+        isbn: document.getElementById("bookIsbn").value,
+        //length: parseInt(document.getElementById("bookLength").value),
+        //cover: document.getElementById("bookCover").value
     }
-    fetch(putEmployeeApiUrl, {
+    fetch(putBookApiUrl, {
         method: "PUT",
         headers: {
             "Accept": 'application/json',
             "Content-Type": 'application/json',
         },
-        body: JSON.stringify(sendEmployee)
+        body: JSON.stringify(sendBook)
     })
     .then((response)=>{
-        myEmployee = sendEmployee;
+        myBook = sendBook;
         populateList();
         populateForm();
     });
@@ -50,10 +53,13 @@ function putBook(id){
 function postBook(){
     
     const sendBook = {
-        username: document.getElementById("empUsername").value,
-        author: document.getElementById("empPassword").value,
-        id: document.getElementById("empId").value,
-        
+        title: document.getElementById("bookTitle").value,
+        author: document.getElementById("bookAuthor").value,
+        condition: document.getElementById("bookCondition").value,
+        numberCopies: parseInt(document.getElementById("numberCopies").value),
+        isn: document.getElementById("bookIsbn").value,
+        //length: parseInt(document.getElementById("bookLength").value),
+        //cover: document.getElementById("bookCover").value
     }
     fetch(booksURL, {
         method: "POST",
@@ -65,15 +71,15 @@ function postBook(){
     })
     .then((response)=>{
         console.log(response);
-        myEmployee = sendEmployee;
+        myBook = sendBook;
         populateList();
         blankFields();
     });
 }
 
 function deleteBook(){
-    const deleteEmployeeApiUrl = employeesURL + "/" + myEmployee.id;
-    fetch(deleteEmployeeApiUrl, {
+    const deleteBookApiUrl = booksURL + "/" + myBook.isbn;
+    fetch(deleteBookApiUrl, {
         method: "DELETE",
         headers: {
             "Accept": 'application/json',
@@ -93,10 +99,10 @@ function handleOnLoad(){
 
 function handleOnChange(){
     const selectedId = document.getElementById("selectListBox").value;
-    employeeList.forEach((employee)=>{
-        if(employee.id == selectedId){
+    bookList.forEach((book)=>{
+        if(book.isn == selectedId){
             console.log(selectedId)
-            myEmployee = employee;
+            myBook = book;
         }
     });
 
@@ -107,7 +113,7 @@ function handleOnChange(){
 function handleEditClick(){
     makeEditable();
     hideAllButtons();
-    var buttonHtml = "<button class=\"btn btn-primary btn-lg\" onclick=\"handleEditSave("+myEmployee.id+")\">Save</button>"
+    var buttonHtml = "<button class=\"btn btn-primary btn-lg\" onclick=\"handleEditSave("+myBook.isn+")\">Save</button>"
     buttonHtml += "<button class=\"btn btn-warning btn-lg btn-cancle\" onclick=\"handleCancelSave()\">Cancel</button>"
     document.getElementById("saveButton").innerHTML = buttonHtml;
     document.getElementById("saveButton").style.display = "inline-block";
@@ -125,10 +131,18 @@ function handleNewClick(){
 }
 
 
+function handleRentClick(){
+    myBook.numberCopies--;
+    document.getElementById("numberCopies").value = myBook.numberCopies;
+    putBook(myBook.isn);
+}
 
 
-
-
+function handleReturnClick(){
+    myBook.numberCopies++;
+    document.getElementById("numberCopies").value = myBook.numberCopies;
+    putBook(myBook.isn);
+}
 
 
 function handleDeleteClick(){
@@ -143,8 +157,8 @@ function handleCancelSave(){
 }
 
 
-function handleEditSave(id){
-    putBook(id);
+function handleEditSave(isn){
+    putBook(isn);
     makeReadOnly();
     showButtons();
     completeTransaction();
@@ -156,7 +170,7 @@ function handleNewSave(){
     makeReadOnly();
     showButtons();
     blankFields();
-   
+    completeTransaction();
 }
 
 

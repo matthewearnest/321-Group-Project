@@ -67,8 +67,9 @@
     
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href = "ordercompleted.html">Test completed transaction</a>
-            <a href = "partners.html">View our Partners</a>
+            <a href = "tradein.html">Make Trade-In</a>
+            <a href = "partners.html">Shop via Online Retailer</a>
+            <a href = "inventory.html">View Inventory</a>
             <a href = "login.html">Log out</a>
           </div>
           
@@ -76,22 +77,23 @@
           
           <script>
           function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("mySidenav").style.width = "fit-content";
           }
           
           function closeNav() {
             document.getElementById("mySidenav").style.width = "0";
           }
           </script>
-
-<div style = "text-align: center;">
-    
-        <input type = "text" size="80" name = "search" id = "searchbar" placeholder = "Search for a book">
+ 
+  
+    <div style = "text-align: center;">
+        <input type = "text" size="80" name = "search" id = "searchbar" placeholder = "Search for a book" ">
         <input type = "submit" value = "Search">
-   
-</div>
+    </div>
+    
+  
 
-<button id = "filter" style = "position: fixed; top: 200px; text-align: center; right: 100px;" >Filter Results</button>
+<label id = "filter" style = "position: fixed; top: 200px; text-align: center; right: 100px; font-size: x-large;" >Filter Results</button>
 
 </div>
 <div id="buttons"; style = "position: relative;">

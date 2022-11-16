@@ -2,18 +2,18 @@ const cwid = "12052267";
 const baseUrl = "https://pa6-backend.herokuapp.com/api/books/"+cwid;
 var bookList = [];
 var myBook = {};
-
+const booksURL = "https://localhost:7258/api/books";
 
 function populateList(){
 
-    const allBooksApiUrl = baseUrl;
-    fetch(allBooksApiUrl).then(function(response){
+    
+    fetch(booksURL).then(function(response){
         return response.json();
     }).then(function(json){
         bookList = json;
         let html = "<select class = \"listBox\" onchange = \"handleOnChange()\" id= \"selectListBox\" name = \"list_box\" size=5 width=\"100%\">";
         json.forEach((book)=>{
-            html += "<option value = " + book.id  + ">" + book.title + "</option>";
+            html += "<option value = " + book.isn  + ">" + book.title + "</option>";
         })
         html += "</select>";
         document.getElementById("listBox").innerHTML = html;
@@ -22,17 +22,17 @@ function populateList(){
     });
 }
 
-function putBook(id){
-    const putBookApiUrl = baseUrl + "/"+id;
+function putBook(isn){
+    const putBookApiUrl = booksURL + "/"+isn;
     const sendBook = {
-        id: id,
+        isn: isn,
         title: document.getElementById("bookTitle").value,
         author: document.getElementById("bookAuthor").value,
-        genre: document.getElementById("bookGenre").value,
-        numAvlb: parseInt(document.getElementById("bookAvlb").value),
+        genre: document.getElementById("bookCondition").value,
+        numberCopies: parseInt(document.getElementById("numberCopies").value),
         isbn: document.getElementById("bookIsbn").value,
-        length: parseInt(document.getElementById("bookLength").value),
-        cover: document.getElementById("bookCover").value
+        //length: parseInt(document.getElementById("bookLength").value),
+        //cover: document.getElementById("bookCover").value
     }
     fetch(putBookApiUrl, {
         method: "PUT",
@@ -50,17 +50,17 @@ function putBook(id){
 }
 
 function postBook(){
-    const postBookApiUrl = baseUrl;
+    
     const sendBook = {
         title: document.getElementById("bookTitle").value,
         author: document.getElementById("bookAuthor").value,
-        genre: document.getElementById("bookGenre").value,
-        numAvlb: parseInt(document.getElementById("bookAvlb").value),
-        isbn: document.getElementById("bookIsbn").value,
-        length: parseInt(document.getElementById("bookLength").value),
-        cover: document.getElementById("bookCover").value
+        condition: document.getElementById("bookGenre").value,
+        numberCopies: parseInt(document.getElementById("numberCopies").value),
+        isn: document.getElementById("bookIsbn").value,
+        //length: parseInt(document.getElementById("bookLength").value),
+        //cover: document.getElementById("bookCover").value
     }
-    fetch(postBookApiUrl, {
+    fetch(booksURL, {
         method: "POST",
         headers: {
             "Accept": 'application/json',
@@ -69,6 +69,7 @@ function postBook(){
         body: JSON.stringify(sendBook)
     })
     .then((response)=>{
+        console.log(response);
         myBook = sendBook;
         populateList();
         blankFields();
@@ -76,7 +77,7 @@ function postBook(){
 }
 
 function deleteBook(){
-    const deleteBookApiUrl = baseUrl + "/" + myBook.id;
+    const deleteBookApiUrl = booksURL + "/" + myBook.isbn;
     fetch(deleteBookApiUrl, {
         method: "DELETE",
         headers: {

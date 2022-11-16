@@ -1,7 +1,7 @@
 const allBooksApiUrl = "https://localhost:7258/api/books";
 // const bookCardTemplate = document.getElementById("data-book-template");
 // const bookCardContainer = document.getElementById("data-book-cards-container");
-// const searchInput = document.querySelector("[data-search]");
+const searchInput = document.querySelector("[data-search]");
 const bookContainer = document.getElementById("books");
 
 let masterBookList = [];
@@ -48,11 +48,11 @@ const renderBookCards = () => {
 function setStorageData(bookData) {
   console.log('made it');
   
-  window.localStorage.setItem("bookData.title", JSON.stringify(bookData));
-  window.localStorage.setItem("bookData.author", JSON.stringify(bookData));
-  window.localStorage.setItem("bookData.condition", JSON.stringify(bookData));
-  window.localStorage.setItem("bookData.isbn", JSON.stringify(bookData));
-  window.localStorage.setItem("bookData.numbercopies", JSON.stringify(bookData));
+  window.localStorage.setItem("title", JSON.stringify(bookData.title));
+  window.localStorage.setItem("author", JSON.stringify(bookData.author));
+  window.localStorage.setItem("condition", JSON.stringify(bookData.condition));
+  window.localStorage.setItem("isbn", JSON.stringify(bookData.isn));
+  window.localStorage.setItem("copies", JSON.stringify(bookData.numbercopies));
   
   console.log(bookData.title);
   window.location.assign("file:///C:/Users/mearn/Source/Repos/Fall2022/321Group9Project/321-Group-Project/client/html/bookselected.html");
