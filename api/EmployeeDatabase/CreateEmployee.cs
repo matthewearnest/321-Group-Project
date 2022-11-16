@@ -15,8 +15,9 @@ namespace api.EmployeeDatabase
             using var con = new MySqlConnection(cs);
             con.Open();
 
-            string stm = @"INSERT INTO employee(employee_username, employee_password, first_name, last_name, is_admin) VALUES(@employee_username, @employee_password, @first_name, @last_name, @is_admin)";
+            string stm = @"INSERT INTO employee(employee_id, employee_username, employee_password, first_name, last_name, is_admin) VALUES(@employee_id, @employee_username, @employee_password, @first_name, @last_name, @is_admin)";
             using var cmd = new MySqlCommand(stm, con);
+            cmd.Parameters.AddWithValue("@employee_id", value.EmployeeID);
             cmd.Parameters.AddWithValue("@employee_username", value.EmployeeUsername);
             cmd.Parameters.AddWithValue("@employee_password", value.EmployeePassword);
             cmd.Parameters.AddWithValue("@first_name", value.FirstName);
