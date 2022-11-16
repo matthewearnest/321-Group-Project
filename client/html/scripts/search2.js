@@ -1,18 +1,18 @@
 const allBooksApiUrl = "https://localhost:7258/api/books";
 // const bookCardTemplate = document.getElementById("data-book-template");
-// const bookCardContainer = document.getElementById("data-book-cards-container");
-const searchInput = document.querySelector("[data-search]");
+//const bookCardContainer = document.getElementById("data-book-cards-container");
+const searchInput = document.querySelector("data-search");
 const bookContainer = document.getElementById("books");
 
 let masterBookList = [];
 
-function searchOnLoad() {
-  const app = document.getElementById("books");
+// function searchOnLoad() {
+//   const app = document.getElementById("books");
 
-  renderBooks();
+//   renderBooks();
 
-  searchBooks();
-}
+//   searchBooks();
+// }
 
 function getBooks() {
   const allBooksApiUrl = "https://localhost:7258/api/books";
@@ -32,18 +32,24 @@ const renderBookCards = () => {
   let html = "";
   masterBookList.forEach((bookData) => {
     html = `
-    <div class="card" style="width: 60rem; left: 10px" onclick = setStorageData()>
+    <div class="card" style="width: fit-content; " onclick = setStorageData()>
       <div class="card-body">
         <h5 class="card-title">${bookData.title}</h5>
-        
       </div>
-    </div>
-      `;
-      
+    </div>`;
+    
   });
   bookContainer.innerHTML = html;
 };
 
+function createCard(bookData, html){
+  html = `
+  <div class="card" style="width: fit-content; " onclick = setStorageData()>
+    <div class="card-body">
+      <h5 class="card-title">${bookData.title}</h5>
+    </div>
+  </div>`;
+}
 
 function setStorageData(bookData) {
   console.log('made it');
@@ -74,23 +80,23 @@ function searchBooks() {
   });
 }
 
-function variableHandling() {
-  var price = 5;
-  var copies = 1;
-  var profit = 1;
-  var total = 0;
-  var tax = profit * 0.1;
-  var taxtotal = price * tax;
+// function variableHandling() {
+//   var price = 5;
+//   var copies = 1;
+//   var profit = 1;
+//   var total = 0;
+//   var tax = profit * 0.1;
+//   var taxtotal = price * tax;
 
-  if (book.Condition === "likeNew") {
-    price = 20.0;
-  } else if (book.Condition === "good") {
-    price = 15.0;
-  } else if (book.Condition === "fair") {
-    price = 10.0;
-  } else if (book.Condition === "poor") {
-    price = 5.0;
-  }
-}
+//   if (book.Condition === "likeNew") {
+//     price = 20.0;
+//   } else if (book.Condition === "good") {
+//     price = 15.0;
+//   } else if (book.Condition === "fair") {
+//     price = 10.0;
+//   } else if (book.Condition === "poor") {
+//     price = 5.0;
+//   }
+// }
 
 
