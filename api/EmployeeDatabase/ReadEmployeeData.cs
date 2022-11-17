@@ -14,9 +14,9 @@ namespace api.EmployeeDatabase
             using var con = new MySqlConnection(cs);
             con.Open();
 
-            string stm = "SELECT * FROM employee WHERE employee_username = @employee_username";
+            string stm = "SELECT * FROM employee WHERE employee_id = @employee_id";
             using var cmd = new MySqlCommand(stm, con);
-            cmd.Parameters.AddWithValue("@employee_username", value.EmployeeUsername);
+            cmd.Parameters.AddWithValue("@employee_id", value.EmployeeID);
             cmd.Prepare();
             using MySqlDataReader rdr = cmd.ExecuteReader();
             con.Close();

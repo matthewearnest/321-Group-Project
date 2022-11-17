@@ -78,6 +78,7 @@ function postBook(){
 
 
 function setBookPrice(){
+    localStorage.setItem("price", price);
     var price = 0;
     if(myBook.condition == "Like New"){
         price = 50;
@@ -91,7 +92,7 @@ function setBookPrice(){
     else{
         price = 5;
     }
-    localStorage.setItem("price", price);
+    localStorage.getItem("price", price);
     console.log(price);
 }
 
@@ -179,6 +180,7 @@ function handleEditSave(isn){
     putBook(isn);
     makeReadOnly();
     showButtons();
+    //setBookPrice();
     completeTransaction();
 }
 
@@ -188,6 +190,7 @@ function handleNewSave(){
     makeReadOnly();
     showButtons();
     blankFields();
+    //setBookPrice();
     completeTransaction();
 }
 

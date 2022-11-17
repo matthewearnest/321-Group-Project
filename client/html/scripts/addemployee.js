@@ -13,7 +13,7 @@ function populateList(){
         employeeList = json;
         let html = "<select class = \"listBox\" onchange = \"handleOnChange()\" id= \"selectListBox\" name = \"list_box\" size=5 width=\"100%\">";
         json.forEach((employee)=>{
-            html += "<option value = " + employee.id  + ">" + employee.username + "</option>";
+            html += "<option value = " + employee.employeeID  + ">" + employee.employeeUsername + "</option>";
         })
         html += "</select>";
         document.getElementById("listBox").innerHTML = html;
@@ -23,13 +23,13 @@ function populateList(){
     hideButtons();
 }
 
-function putBook(id){
-    const putEmployeeApiUrl = employeesURL + "/"+id;
+function putBook(employeeID){
+    const putEmployeeApiUrl = employeesURL + "/"+ employeeID;
     const sendEmployee = {
-        id: id,
+        employeeID: employeeID,
         username: document.getElementById("empUsername").value,
         author: document.getElementById("empPassword").value,
-        id: document.getElementById("empId").value,
+        employeeID: document.getElementById("empId").value,
         
     }
     fetch(putEmployeeApiUrl, {
@@ -50,9 +50,9 @@ function putBook(id){
 function postBook(){
     
     const sendBook = {
-        username: document.getElementById("empUsername").value,
-        author: document.getElementById("empPassword").value,
-        id: document.getElementById("empId").value,
+        employeeUsername: document.getElementById("empUsername").value,
+        employeePassword: document.getElementById("empPassword").value,
+        employeeID: document.getElementById("empId").value,
         
     }
     fetch(booksURL, {
@@ -72,7 +72,7 @@ function postBook(){
 }
 
 function deleteBook(){
-    const deleteEmployeeApiUrl = employeesURL + "/" + myEmployee.id;
+    const deleteEmployeeApiUrl = employeesURL + "/" + myEmployee.employeeID;
     fetch(deleteEmployeeApiUrl, {
         method: "DELETE",
         headers: {
@@ -94,7 +94,7 @@ function handleOnLoad(){
 function handleOnChange(){
     const selectedId = document.getElementById("selectListBox").value;
     employeeList.forEach((employee)=>{
-        if(employee.id == selectedId){
+        if(employee.employeeID == selectedId){
             console.log(selectedId)
             myEmployee = employee;
         }
@@ -107,7 +107,7 @@ function handleOnChange(){
 function handleEditClick(){
     makeEditable();
     hideAllButtons();
-    var buttonHtml = "<button class=\"btn btn-primary btn-lg\" onclick=\"handleEditSave("+myEmployee.id+")\">Save</button>"
+    var buttonHtml = "<button class=\"btn btn-primary btn-lg\" onclick=\"handleEditSave("+myEmployee.employeeID+")\">Save</button>"
     buttonHtml += "<button class=\"btn btn-warning btn-lg btn-cancle\" onclick=\"handleCancelSave()\">Cancel</button>"
     document.getElementById("saveButton").innerHTML = buttonHtml;
     document.getElementById("saveButton").style.display = "inline-block";
@@ -143,8 +143,8 @@ function handleCancelSave(){
 }
 
 
-function handleEditSave(id){
-    putBook(id);
+function handleEditSave(employeeID){
+    putBook(employeeID);
     makeReadOnly();
     showButtons();
     completeTransaction();
@@ -172,9 +172,9 @@ function completeTransaction()
 
 
 function populateForm(){
-    document.getElementById("empUsername").value = myEmployee.username;
-    document.getElementById("empPassword").value = myEmployee.password;
-    document.getElementById("empID").value = myEmployee.id;
+    document.getElementById("empUsername").value = myEmployee.employeeUsername;
+    document.getElementById("empPassword").value = myEmployee.employeePassword;
+    document.getElementById("empID").value = myEmployee.employeeID;
     //document.getElementById("bookLength").value = myBook.length;
     //document.getElementById("bookCover").value = myBook.cover;
     //var html = "<img class = \"coverArt\" src = \"" + myBook.cover + "\"></img>";
