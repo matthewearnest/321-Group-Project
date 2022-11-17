@@ -54,11 +54,12 @@ function createCard(bookData, html){
 function setStorageData(bookData) {
   console.log('made it');
   
-  window.localStorage.setItem("title", JSON.stringify(bookData.title));
-  window.localStorage.setItem("author", JSON.stringify(bookData.author));
-  window.localStorage.setItem("condition", JSON.stringify(bookData.condition));
   window.localStorage.setItem("isbn", JSON.stringify(bookData.isn));
+  window.localStorage.setItem("condition", JSON.stringify(bookData.condition));
+  window.localStorage.setItem("price", JSON.stringify(bookData.price));
+  window.localStorage.setItem("author", JSON.stringify(bookData.author));
   window.localStorage.setItem("copies", JSON.stringify(bookData.numbercopies));
+  window.localStorage.setItem("title", JSON.stringify(bookData.title));
   
   console.log(bookData.title);
   window.location.assign("file:///C:/Users/mearn/Source/Repos/Fall2022/321Group9Project/321-Group-Project/client/html/bookselected.html");
@@ -69,7 +70,7 @@ function Go(){
 }
 
 function searchBooks() {
-  searchInput.addEventListener("input", (e) => {
+  searchInput.addEventListener("data-search", (e) => {
     const value = e.target.value;
     masterBookList.forEach((book) => {
       const isVisible =
