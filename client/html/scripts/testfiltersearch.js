@@ -1,31 +1,6 @@
 let masterBookList = []
-<<<<<<< HEAD
 app = document.getElementById("books");
 
-=======
-
-// let arr = ["anagrams-of-string-(with-duplicates)", "array-concatenation", 
-// "array-difference", "array-includes", "array-intersection", "array-remove", "array-sample", 
-// "array-union", "array-without", "array-zip", "average-of-array-of-numbers", "bottom-visible", 
-// "capitalize-first-letter-of-every-word", "capitalize-first-letter", "chain-asynchronous-functions", 
-// "check-for-palindrome", "chunk-array", "collatz-algorithm", "compact", "count-occurrences-of-a-value-in-array", 
-// "current-URL", "curry", "deep-flatten-array", "distance-between-two-points", "divisible-by-number", 
-// "drop-elements-in-array", "element-is-visible-in-viewport", "escape-regular-expression", "even-or-odd-number", 
-// "factorial", "fibonacci-array-generator", "fill-array", "filter-out-non-unique-values-in-an-array", 
-// "flatten-array-up-to-depth", "flatten-array", "get-days-difference-between-dates", "get-max-value-from-array", 
-// "get-min-value-from-array", "get-native-type-of-value", "get-scroll-position", "greatest-common-divisor-(GCD)", 
-// "group-by", "hamming-distance", "head-of-list", "hexcode-to-RGB", "initial-of-list", "initialize-array-with-range", 
-// "initialize-array-with-values", "is-array", "is-boolean", "is-function", "is-number", "is-string", "is-symbol", 
-// "last-of-list", "measure-time-taken-by-function", "median-of-array-of-numbers", "nth-element-of-array", 
-// "number-to-array-of-digits", "object-from-key-value-pairs", "object-to-key-value-pairs", "ordinal-suffix-of-number", 
-// "percentile", "pick", "pipe", "powerset", "promisify", "random-integer-in-range", "random-number-in-range", 
-// "redirect-to-URL", "reverse-a-string", "RGB-to-hexadecimal", "round-number-to-n-digits", "run-promises-in-series",
-// "scroll-to-top", "shallow-clone-object", "shuffle-array", "similarity-between-arrays", "sleep", 
-// "sort-characters-in-string-(alphabetical)", "speech-synthesis-(experimental)", "standard-deviation", 
-// "sum-of-array-of-numbers", "swap-values-of-two-variables", "tail-of-list", "take-right", "take", "truncate-a-string", 
-// "unique-values-of-array", "URL-parameters", "UUID-generator", "validate-email", "validate-number", "value-or-default", 
-// "write-json-to-file"]
->>>>>>> 935c1ffb54a3c4262fb1135e02acef40f5586cc7
 
 function getBooks() {
     const allBooksApiUrl = "https://localhost:7258/api/books";
@@ -38,44 +13,123 @@ function getBooks() {
           masterBookList.push(book);
         });
         console.log(masterBookList)
-<<<<<<< HEAD
         updateResult("")
-=======
->>>>>>> 935c1ffb54a3c4262fb1135e02acef40f5586cc7
       });
   }
 
 const updateResult = query => {
 	let resultList = document.querySelector(".result");
 	resultList.innerHTML = "";
-<<<<<<< HEAD
   
   masterBookList.map(algo =>{
           console.log(algo.title)
 		query.split(" ").map(word =>{
 			if(algo.title.toLowerCase().indexOf(word.toLowerCase()) != -1){
 				resultList.innerHTML += `<li id = "${algo.isn}"class="list-group-item" onclick = "onBookClick(this.id)">${algo.title}</li>`;
-=======
-
-	masterBookList.map(algo =>{
-		query.split(" ").map(word =>{
-			if(algo.toLowerCase().indexOf(word.toLowerCase()) != -1){
-				resultList.innerHTML += `<li class="list-group-item">${algo}</li>`;
->>>>>>> 935c1ffb54a3c4262fb1135e02acef40f5586cc7
 			}
 		})
 	})
 }
 
-<<<<<<< HEAD
+var NoofItems = 1;
+var orderNumber = 1;
 const onBookClick = (isn) => {
+  NoofItems = 1;
+  orderNumber++;
   console.log(isn)
+  localStorage.setItem("isn", isn);
+  localStorage.setItem("title", masterBookList[isn-1].title);
+
+  localStorage.setItem("author", masterBookList[isn-1].author);
+ 
+  localStorage.setItem("price", masterBookList[isn-1].price);
+
+  localStorage.setItem("condition", masterBookList[isn-1].condition);
+  
+  localStorage.setItem("numberCopies", masterBookList[isn-1].numberCopies);
+
+  window.location.assign("file:///C:/Users/mearn/Source/Repos/Fall2022/321Group9Project/321-Group-Project/client/html/bookselected.html");
+}
+
+function testLocalStorage(){
+  console.log(localStorage.getItem("isn"));
+}
+
+
+function populateForm()
+{
+  console.log(localStorage.getItem("isn"));
+  console.log(localStorage.getItem("title"));
+  console.log(localStorage.getItem("author"));
+  console.log(localStorage.getItem("price"));
+  console.log(localStorage.getItem("condition"));
+  let isn = localStorage.getItem("isn")
+  let title = localStorage.getItem("title")
+  let author = localStorage.getItem("author")
+  let price = getPrice();
+  let condition = localStorage.getItem("condition")
+  let numberCopies = localStorage.getItem("numberCopies")
+    document.getElementById("bookIsbn").value = isn;
+    document.getElementById("bookTitle").value = title;
+    document.getElementById("bookAuthor").value = author;
+    document.getElementById("bookPrice").value = price;
+    document.getElementById("bookCondition").value = condition;
+    document.getElementById("numberCopies").value = numberCopies;
+}
+
+function getPrice()
+{
+  let condition = localStorage.getItem("condition")
+  if(condition = "Like New")
+  {
+    localStorage.setItem("price", 15);
+  }
+  else if(condition = "Gently Used")
+  {
+    localStorage.setItem("price", 10);
+  }
+  else if(condition = "Worn")
+  {
+    localStorage.setItem("price", 5);
+  }
+  else
+  {
+    localStorage.setItem("price", 0);
+  }
+  return localStorage.getItem("price");
+}
+
+
+
+function populateOrderForm()
+{
+ 
+    console.log(orderNumber);
+    document.getElementById("orderNumber").value = orderNumber;
+    document.getElementById("orderDate").value = getDate();
+    document.getElementById("orderStatus").value = "In Progress";
+    document.getElementById("NoofItems").value = NoofItems;
+    document.getElementById("orderTotal").value = localStorage.getItem("price");
+    
+}
+function addToCart()
+{
+  
+  localStorage.setItem("price", price + price);
+  NoofItems++;
+  window.location.assign("file:///C:/Users/mearn/Source/Repos/Fall2022/321Group9Project/321-Group-Project/client/html/checkout.html");
+
+}
+
+function getDate(){
+  var date = new Date();
+  var month = date.getMonth() + 1;
+  var day = date.getDate();
+  var year = date.getFullYear();
+  var dateString = month + "/" + day + "/" + year;
+  return dateString;
 }
 
 
 
 
-=======
-
-updateResult("")
->>>>>>> 935c1ffb54a3c4262fb1135e02acef40f5586cc7

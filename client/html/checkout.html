@@ -4,18 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <title>Customer Checkout</title>
 </head>
-<body onload = "testLocalStorage()">
+<body onload = "populateOrderForm()" style = "background-color: lightblue;">
+    <div class="jumbotron">
+        
+        <div class="p-5 mb-4 bg-secondary">
+            <h1 class="display-5 fw-bold"; style = "text-align: center;">Welcome Back!</h1>
+            
+        </div>
     <div class = "container" id = "orderinfo">
         <div type = "text" id = "orderinfo">
-            <h1>Order Information</h1>
-            <p>Order Number: 123456789</p>
-            <p>Order Date: Placeholder</p>
-            <p>Order Status: Complete</p>
-            <p>Order Total: $100.00</p>
+            <label for="orderNumber">Order Number</label>
+            <input style = "width: 200px" type="text" id="orderNumber" name="isbn" readOnly><br><br>
+            <label for="orderDate">Order Date:</label>
+            <input style = "width: 800px"type="text" id="orderDate" name="title" readOnly><br><br>
+            <label for="orderStatus">Status:</label>
+            <input style = "width: 800px"type="text" id="orderStatus" name="author" readOnly><br><br>
+            <label for="NoofItems">Number of Items:</label>
+            <input style = "width: 200px"type="text" id="NoofItems" name="price" readOnly><br><br>
+            <label for="orderTotal">Total:</label>
+            <input style = "width: 200px"type="text" id="orderTotal" name="price" readOnly><br><br>
         </div>
     </div>
-    <script src = "scripts/checkout.js"></script>
+    <button type="button" class="btn btn-primary" onclick="window.location.href='file:///C:/Users/mearn/Source/Repos/Fall2022/321Group9Project/321-Group-Project/client/html/ordercompleted.html'">Pay with Square</button>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src = "scripts/testfiltersearch.js"></script>
 </body>
 </html>
