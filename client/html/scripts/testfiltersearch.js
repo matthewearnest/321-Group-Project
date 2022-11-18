@@ -32,7 +32,7 @@ const updateResult = query => {
 }
 
 var NoofItems = 1;
-var orderNumber = 1;
+var orderNumber;
 const onBookClick = (isn) => {
   NoofItems = 1;
   orderNumber++;

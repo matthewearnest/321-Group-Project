@@ -91,9 +91,9 @@ function populateForm(){
     document.getElementById("numberCopies").value = myBook.numberCopies;
     document.getElementById("bookIsbn").value = myBook.isn;
     //document.getElementById("bookLength").value = myBook.length;
-    //document.getElementById("bookCover").value = myBook.cover;
-    //var html = "<img class = \"coverArt\" src = \"" + myBook.cover + "\"></img>";
-    //document.getElementById("picBox").innerHTML = html;
+    // document.getElementById("bookCover").value = myBook.cover;
+    // var html = "<img class = \"coverArt\" src = \"" + myBook.cover + "\"></img>";
+    // document.getElementById("picBox").innerHTML = html;
 }
 
 
