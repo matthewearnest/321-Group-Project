@@ -147,15 +147,15 @@ function handleEditSave(employeeID){
     putBook(employeeID);
     makeReadOnly();
     showButtons();
-    completeTransaction();
+    alert("Employee Updated");
 }
-
 
 function handleNewSave(){
     postBook();
     makeReadOnly();
     showButtons();
     blankFields();
+    alert("Employee Added");
    
 }
 
@@ -185,8 +185,8 @@ function populateForm(){
 function hideButtons(){
     
     document.getElementById("deleteButton").style.display = "none";
-    document.getElementById("rentButton").style.display = "none";
-    document.getElementById("returnButton").style.display = "none";
+   // document.getElementById("rentButton").style.display = "none";
+   // document.getElementById("returnButton").style.display = "none";
 }
 
 function hideAllButtons(){
@@ -194,8 +194,8 @@ function hideAllButtons(){
     document.getElementById("newButton").style.display = "none";
     document.getElementById("editButton").style.display = "none";
     document.getElementById("deleteButton").style.display = "none";
-    document.getElementById("rentButton").style.display = "none";
-    document.getElementById("returnButton").style.display = "none";
+    //document.getElementById("rentButton").style.display = "none";
+    //document.getElementById("returnButton").style.display = "none";
 }
 
 

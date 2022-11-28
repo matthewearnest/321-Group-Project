@@ -180,7 +180,7 @@ function handleEditSave(isn){
     putBook(isn);
     makeReadOnly();
     showButtons();
-    //setBookPrice();
+    getPrice();
     completeTransaction();
 }
 
@@ -190,7 +190,7 @@ function handleNewSave(){
     makeReadOnly();
     showButtons();
     blankFields();
-    //setBookPrice();
+    getPrice();
     completeTransaction();
 }
 
@@ -280,11 +280,14 @@ function makeReadOnly(){
 }
 
 var NoofItems = 1;
-var orderNumber;
+
+
 const onBookClick = (isn) => {
   NoofItems = 1;
-  orderNumber++;
+  
   console.log(isn)
+    
+    
   localStorage.setItem("isn", isn);
   localStorage.setItem("title", masterBookList[isn-1].title);
 
@@ -296,6 +299,7 @@ const onBookClick = (isn) => {
   
   localStorage.setItem("numberCopies", masterBookList[isn-1].numberCopies);
 
+
   window.location.assign("file:///C:/Users/mearn/Source/Repos/Fall2022/321Group9Project/321-Group-Project/client/html/bookselected.html");
 }
 
@@ -306,11 +310,12 @@ function testLocalStorage(){
 
 function populateForm()
 {
+    NoofItems = 1;
   console.log(localStorage.getItem("isn"));
   console.log(localStorage.getItem("title"));
   console.log(localStorage.getItem("author"));
   console.log(localStorage.getItem("price"));
-  console.log(localStorage.getItem("condition"));
+  console.log(localStorage.getItem("condition"));;
   let isn = localStorage.getItem("isn")
   let title = localStorage.getItem("title")
   let author = localStorage.getItem("author")
@@ -320,7 +325,7 @@ function populateForm()
     document.getElementById("bookIsbn").value = isn;
     document.getElementById("bookTitle").value = title;
     document.getElementById("bookAuthor").value = author;
-    document.getElementById("bookPrice").value = price;
+    //document.getElementById("bookPrice").value = price;
     document.getElementById("bookCondition").value = condition;
     document.getElementById("numberCopies").value = numberCopies;
 }
@@ -330,34 +335,37 @@ function getPrice()
   let condition = localStorage.getItem("condition")
   if(condition = "Like New")
   {
-    localStorage.setItem("price", 15);
+    localStorage.setItem("price", "$15.00");
   }
   else if(condition = "Gently Used")
   {
-    localStorage.setItem("price", 10);
+    localStorage.setItem("price", "10.00");
   }
   else if(condition = "Worn")
   {
-    localStorage.setItem("price", 5);
+    localStorage.setItem("price", "$5.00");
   }
   else
   {
-    localStorage.setItem("price", 0);
+    localStorage.setItem("price", "$0.00");
   }
   return localStorage.getItem("price");
 }
 
-
+let orderNumber = 1;
 
 function populateOrderForm()
 {
  
     console.log(orderNumber);
+    orderNumber + 2;
     document.getElementById("orderNumber").value = orderNumber;
     document.getElementById("orderDate").value = getDate();
     document.getElementById("orderStatus").value = "In Progress";
-    document.getElementById("NoofItems").value = NoofItems;
+    document.getElementById("NoofItems").value = 1;
     document.getElementById("orderTotal").value = localStorage.getItem("price");
+    orderNumber++;
+    localStorage.setItem("orderNumber", orderNumber);
     
 }
 function addToCart()

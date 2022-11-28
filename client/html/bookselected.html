@@ -15,29 +15,30 @@
             <h1 class="display-5 fw-bold"; style = "text-align: center;">Book selected</h1>
         </div>
     </div>
-        <div>
+        <div style = "position: relative; top: 50px; left: 20px;">
             <label for="bookIsbn">ISBN:</label>
             <input style = "width: 200px" type="text" id="bookIsbn" name="isbn" readOnly><br><br>
             <label for="bookTitle">Title:</label>
-            <input style = "width: 800px"type="text" id="bookTitle" name="title" readOnly><br><br>
+            <input style = "width: 600px"type="text" id="bookTitle" name="title" readOnly><br><br>
             <label for="bookAuthor">Author:</label>
-            <input style = "width: 800px"type="text" id="bookAuthor" name="author" readOnly><br><br>
+            <input style = "width: 600px"type="text" id="bookAuthor" name="author" readOnly><br><br>
             <label for="bookPrice">Price:</label>
             <input style = "width: 200px"type="text" id="bookPrice" name="price" readOnly><br><br>
             <label for="bookCondition">Condition:</label>
-            <input style = "width: 800px"type="text" id="bookCondition" name="condition" readOnly><br><br>
+            <input style = "width: 400px"type="text" id="bookCondition" name="condition" readOnly><br><br>
             <label for="numberCopies">Number Available:</label>
             <input style = "width: 400px"type="text" id="numberCopies" name="copies" readOnly><br><br>
         </div>
         
         
         
-
-
-        <button style = "position: fixed; bottom: 50px; right: 580px; border-radius: 15px;"><h1><a href = "checkout.html">Customer Buy</a></h1></button>
-        <button style = "position: fixed; bottom: 50px; right: 60px; border-radius: 15px;"><h1><a href = "tradein.html">Trade-In</a></h1></button>
-        <button style = "position: fixed; bottom: 50px; right: 300px; border-radius: 15px;"><h1><a href = "search.html">Return home</a></h1></button>
-        <button onclick = "addToCart()" style = "position: fixed; bottom: 50px; right: 900px; border-radius: 15px;"><h1>Add To Cart</h1></button>
+        <img src = "images/barcode (1).png" style = "position: fixed; top: 250px; right: 500px; width: 100px; height: 100px;">
+        <button style = "position: fixed; bottom: 400px; right: 150px; border-radius: 15px;"><h1>Print Barcode</a></h1></button>
+        <button style = "position: fixed; bottom: 50px; right: 150px; border-radius: 15px;"><h1><a href = "checkout.html">Go to Checkout</a></h1></button>
+        <button style = "position: fixed; bottom: 150px; right: 150px; border-radius: 15px;"><h1><a href = "tradein.html">Trade-In</a></h1></button>
+        <button style = "position: fixed; bottom: 250px; right: 150px; border-radius: 15px;"><h1><a href = "search.html">Return home</a></h1></button>
+        <button onclick = "addToCart()" style = "position: fixed; bottom: 50px; right: 1100px; border-radius: 15px;"><h1>Add To Cart</h1></button>
+        <img src = "images/cart-removebg-preview.png" style = "position: fixed; bottom: 50px; right: 1400px; width: 100px; height: 100px;">
 
         <script src = "scripts/testfiltersearch.js"></script>
 

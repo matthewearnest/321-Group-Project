@@ -102,7 +102,9 @@
             <a href = "tradein.html">Make Trade-In</a>
             <a href = "partners.html">Shop via Online Retailer</a>
             <a href = "inventory.html">View Inventory</a>
+            <a href = "holds.html">Make/View Holds</a>
             <a href = "login.html">Log out</a>
+            
           </div>
           
           <span style="position: fixed; font-size:30px;cursor:pointer; top: 10px; left: 10px; text-decoration: solid;" onclick="openNav()">&#9776; Menu</span>
@@ -134,14 +136,24 @@
         
           </div>
 
-     
+        
         
         </body>
  
  <script src="./scripts/testfiltersearch.js"></script>
     
   
+ <div id="buttons"; style = "position: relative;">
+  <button style = "position: fixed; top: 255px; text-align: center; right: 50px; width: 150px;">Filter</button>
+  <button style = "position: fixed; top: 315px; text-align: center; right: 50px;"
+  class="button-value" onclick="filterResults('all')">All</button>
 
+  <button style = "position: fixed; top: 377px; text-align: center; right: 50px;"
+  class="button-value" onclick="filterCondition('Like New')">Condition</button>
+
+  <button style = "position: fixed; top: 440px; text-align: center; right: 50px;"
+  class="button-value" onclick="filterAuthor('Author')">Author</button>
+</div>
 <!-- <label id = "filter" style = "position: fixed; top: 200px; text-align: center; right: 100px; font-size: x-large;" >Filter Results</button> -->
 
 </div>

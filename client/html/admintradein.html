@@ -12,16 +12,15 @@
     <title>Book Rental</title>
   </head>
   <body onload="handleOnLoad()"; style = "background-color: lightblue;">
-      <script src="scripts/webpa1.js"></script>
-      <script src="scripts/webpa2.js"></script>
+      <script src="scripts/tradein.js"></script>
       
-      <div class="jumbotron">
-        <h1>Add Book</h1>
+      <div class="jumbotron" style = "text-align: center;">
+        <h1>Trade In</h1>
       </div>
       <div class="container">
         <div class="row">
             <div class="col-md-3">
-                <h3>Available Books</h3>
+                <h3>Current Books</h3>
                 <div id="listBox"></div>
             </div>
             <div class="col-md-6">
@@ -38,8 +37,8 @@
                     <label for="bookIsbn">ISBN:</label>
                     <input type="text" id="bookIsbn" name="isbn" readOnly><br><br>
                     <!-- <label for="bookLength">Length:</label>
-                    <input type="text" id="bookLength" name="length" readOnly><br><br> -->
-                    <!-- <label for="bookCover">Cover URL:</label>
+                    <input type="text" id="bookLength" name="length" readOnly><br><br>
+                    <label for="bookCover">Cover URL:</label>
                     <input type="text" id="bookCover" name="cover" readOnly><br><br> -->
                 </form>
                 <div class="btnRow">
@@ -52,12 +51,15 @@
                     <span id="saveButton"></span>
                 </div>
 
-                
+
             </div>
-            
+            <div class="col-md-3">
+                <h3>Cover Art</h3>
+                <div id="picBox"></div>
+            </div>
         </div>
+        <a href = "adminsearch.html"><button style = "position: fixed; bottom: 50px; left: 200px; border-radius: 15px;"><h1>Return home</h1></button></a>
       </div>
-      <a href = "adminsearch.html"><button style = "position: fixed; bottom: 50px; left: 200px; border-radius: 15px;"><h1>Return home</h1></button></a>
     
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->

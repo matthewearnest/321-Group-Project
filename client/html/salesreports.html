@@ -6,11 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sales Reports</title>
 </head>
-<body onload = salesOnLoad(); style = "background-color: lightblue; text-align: center;">
+<body style = "background-color: lightblue; text-align: center;">
     <scripts src = "scripts/salesreports.js"></scripts>
     <div id = "sales"></div>`
+    <button onclick = ViewQuantityMonth()>View Quantity Sold By Month</button>
+    <button onclick = ViewQuantityDay()>View Quantity Sold By Day</button>
+    <button onclick = ViewConditionDay()>View Quantity Sold By Condition per Day</button>
+    <button onclick = ViewQuantityMonth()>View Quantity Sold By Condition per Month</button>
+    <button onclick = ViewProfitMonth()>View Profit By Month</button>
 
-
-    <button style = "position: fixed; bottom: 50px; right: 300px;"><h1><a href = "search.html">Return home</a></h1></button>
+    <button style = "position: fixed; bottom: 50px; right: 300px; border-radius: 15px;"><h1><a href = "adminsearch.html">Return home</a></h1></button>
+    <script src = "scripts/salesreports.js" defer></script>
 </body>
 </html>

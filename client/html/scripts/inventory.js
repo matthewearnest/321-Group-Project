@@ -49,7 +49,7 @@ const updateResult = query => {
           console.log(algo.title)
 		query.split(" ").map(word =>{
 			if(algo.title.toLowerCase().indexOf(word.toLowerCase()) != -1){
-				resultList.innerHTML += `<li id = "${algo.isn}" style = "text-align: center;" class="list-group-item" onclick = "onBookClick(this.id)">Title: ${algo.title} --------------------------------- Number of Copies: ${algo.numberCopies}</li>`;
+				resultList.innerHTML += `<li id = "${algo.isn}" style = "text-align: center;" class="list-group-item" onclick = "onBookClick(this.id)">Title: ${algo.title} -----------------Genre: ${algo.condition}---------------- Number of Copies: ${algo.numberCopies}</li>`;
 			}
 		})
 	})
