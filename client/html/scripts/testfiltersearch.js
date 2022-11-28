@@ -139,6 +139,18 @@ function getDate(){
 
 
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+
+
+>>>>>>> 0a939cca61b816b66d8323ba0a077b73640ebb98
 //FILTERS BELOW
 function filterResults(){
   const allBooksApiUrl = "https://localhost:7258/api/books";
