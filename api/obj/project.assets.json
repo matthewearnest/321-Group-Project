@@ -9486,19 +9486,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mearn\\.nuget\\packages\\": {}
+    "C:\\Users\\ellap\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mearn\\Source\\Repos\\Fall2022\\321Group9Project\\321-Group-Project\\api\\api.csproj",
+      "projectUniqueName": "C:\\Users\\ellap\\Desktop\\MIS321\\321-Group-Project\\api\\api.csproj",
       "projectName": "api",
-      "projectPath": "C:\\Users\\mearn\\Source\\Repos\\Fall2022\\321Group9Project\\321-Group-Project\\api\\api.csproj",
-      "packagesPath": "C:\\Users\\mearn\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mearn\\Source\\Repos\\Fall2022\\321Group9Project\\321-Group-Project\\api\\obj\\",
+      "projectPath": "C:\\Users\\ellap\\Desktop\\MIS321\\321-Group-Project\\api\\api.csproj",
+      "packagesPath": "C:\\Users\\ellap\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ellap\\Desktop\\MIS321\\321-Group-Project\\api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\mearn\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\ellap\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -9562,7 +9562,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }
