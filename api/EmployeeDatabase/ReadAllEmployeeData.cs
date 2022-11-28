@@ -22,7 +22,7 @@ namespace api.EmployeeDatabase
 
             List<Employee> allEmployees = new List<Employee>();
             while(rdr.Read()){
-                allEmployees.Add(new Employee(){EmployeeUsername = rdr.GetString(0), EmployeePassword = rdr.GetString(1), FirstName = rdr.GetString(2), LastName = rdr.GetString(3), IsAdmin = rdr.GetBoolean(4)});
+                allEmployees.Add(new Employee(){EmployeeID = rdr.GetInt32(0), EmployeeUsername = rdr.GetString(1), EmployeePassword = rdr.GetString(2), FirstName = rdr.GetString(3), LastName = rdr.GetString(4), IsAdmin = rdr.GetBoolean(5)});
             }
             con.Close();
             return allEmployees;

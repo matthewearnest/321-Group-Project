@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\ellap\\Desktop\\MIS321\\321-Group-Project\\api\\api.csproj": {}
   },
   "projects": {
@@ -15,6 +16,22 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ellap\\AppData\\Roaming\\NuGet\\NuGet.Config"
+=======
+    "/Users/bellakimbrell/Documents/SCHOOL/GROUP_PROJECT/321-Group-Project/api/api.csproj": {}
+  },
+  "projects": {
+    "/Users/bellakimbrell/Documents/SCHOOL/GROUP_PROJECT/321-Group-Project/api/api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/bellakimbrell/Documents/SCHOOL/GROUP_PROJECT/321-Group-Project/api/api.csproj",
+        "projectName": "api",
+        "projectPath": "/Users/bellakimbrell/Documents/SCHOOL/GROUP_PROJECT/321-Group-Project/api/api.csproj",
+        "packagesPath": "/Users/bellakimbrell/.nuget/packages/",
+        "outputPath": "/Users/bellakimbrell/Documents/SCHOOL/GROUP_PROJECT/321-Group-Project/api/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/bellakimbrell/.nuget/NuGet/NuGet.Config"
+>>>>>>> 8346ba1cb6d4a6b9789a084792eef4518a25a3f8
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -65,8 +82,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -78,7 +94,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.201/RuntimeIdentifierGraph.json"
+>>>>>>> 8346ba1cb6d4a6b9789a084792eef4518a25a3f8
         }
       }
     }

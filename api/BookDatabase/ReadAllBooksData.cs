@@ -29,11 +29,12 @@ namespace api.BookDatabase
                     {
                         Isn = rdr.GetInt32(0),
                         Condition = rdr.GetString(1),
-                        Author = rdr.GetString(2),
-                        NumberCopies = rdr.GetInt32(3),
-                        Title = rdr.GetString(4),
-                        Barcode = rdr.GetString(5),
-                        OrderItemizedId = rdr.GetInt32(6)
+                        Price = rdr.GetDouble(2),
+                        Author = rdr.GetString(3),
+                        NumberCopies = rdr.GetInt32(4),
+                        Title = rdr.GetString(5),
+                        Barcode = rdr.GetString(6),
+                        OrderItemizedId = rdr.GetInt32(7)
                     });
                 }
                 return allBooks;

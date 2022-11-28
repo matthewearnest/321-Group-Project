@@ -1,18 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Employee</title>
-</head>
-<body style = "background-color: lightblue; text-align: center;">
-    <div class="jumbotron">
-        <div class="p-5 mb-4 bg-secondary">
-            <h1 class="display-5 fw-bold"; style = "text-align: center;">Add Employee</h1>
-        </div>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <button style = "position: fixed; bottom: 50px; right: 300px;"><h1><a href = "search.html">Return home</a></h1></button>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/webpa1.css">
+
+    <title>Add Employee</title>
+  </head>
+  <body onload="handleOnLoad()"; style = "background-color: lightblue;">
+      <script src="scripts/addemployee.js"></script>
+      
+      <div class="jumbotron" style = "text-align: center;">
+        <h1>Add Employee</h1>
+      </div>
+      <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <h3>Current Employees</h3>
+                <div id="listBox"></div>
+            </div>
+            <div class="col-md-6">
+                <h3 class="inputHeader">Book Information</h3>
+                <form onsubmit="return false;" method="post">
+                    <label for="empUsername">Username:</label>
+                    <input type="text" id="empUsername" name="Username" readOnly><br><br>
+                    <label for="empPassword">Password:</label>
+                    <input type="text" id="empPassword" name="Password" readOnly><br><br>
+                    <label for="empID">ID:</label>
+                    <input type="text" id="empID" name="ID" readOnly><br><br>
+        
+                    <!-- <label for="bookLength">Length:</label>
+                    <input type="text" id="bookLength" name="length" readOnly><br><br>
+                    <label for="bookCover">Cover URL:</label>
+                    <input type="text" id="bookCover" name="cover" readOnly><br><br> -->
+                </form>
+                <div class="btnRow">
+                    <button id="newButton" class="btn btn-primary" onclick="handleNewClick()">New</button>
+                    <button id="editButton" class="btn btn-primary" onclick="handleEditClick()">Edit</button>
+                    <button id="deleteButton" class="btn btn-danger" onclick="handleDeleteClick()">Delete</button>
+                    <br>
+                    <span id="saveButton"></span>
+                </div>
+
+
+            </div>
+        </div>
+        <a href = "adminsearch.html"><button style = "position: fixed; bottom: 50px; left: 200px; border-radius: 15px;"><h1>Return home</h1></button></a>
+      </div>
     
-</body>
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+  </body>
 </html>

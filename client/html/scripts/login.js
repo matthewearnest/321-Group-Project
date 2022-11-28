@@ -33,10 +33,15 @@ function newLogin(){
         const username = document.getElementById("username").value;
         const password = document.getElementById("password").value;
     
-        if (username === "bellaKimbrell" && password === "bella") {
-            alert("You have successfully logged in.");
+        if (username === "bellaKimbrell" && password === "bella" || username === "matthewEarnest" && password === "matthew") {
+            alert("You have successfully logged in. ADMIN");
             window.location.href = "file:///C:/Users/mearn/Source/Repos/Fall2022/321Group9Project/321-Group-Project/client/html/adminsearch.html";
-        } else {
+        } 
+        else if(username === "tjThomas" && password === "tj" || username === "ellaPlaia" && password === "ella" ){
+            alert("You have successfully logged in.");
+            window.location.href = "file:///C:/Users/mearn/Source/Repos/Fall2022/321Group9Project/321-Group-Project/client/html/search.html";
+        }
+        else {
             loginErrorMsg.style.opacity = 1;
         }
     }
