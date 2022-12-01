@@ -123,7 +123,7 @@ function populateOrderForm()
     document.getElementById("orderStatus").value = "In Progress";
     document.getElementById("NoofItems").value = 2;
     document.getElementById("orderTotal").value = localStorage.getItem("price");
-    
+
 }
 
 
@@ -139,18 +139,6 @@ function getDate(){
 
 
 
-<<<<<<< HEAD
-=======
-
-
-
-
-
-
-
-
-
->>>>>>> 0a939cca61b816b66d8323ba0a077b73640ebb98
 //FILTERS BELOW
 function filterResults(){
   const allBooksApiUrl = "https://localhost:7258/api/books";
