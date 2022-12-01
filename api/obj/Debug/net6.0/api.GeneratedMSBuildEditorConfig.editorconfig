@@ -8,9 +8,25 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = api
 build_property.RootNamespace = api
+<<<<<<< HEAD
 build_property.ProjectDir = C:\Users\mearn\Source\Repos\Fall2022\321Group9Project\321-Group-Project\api\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = C:\Users\mearn\Source\Repos\Fall2022\321Group9Project\321-Group-Project\api
+=======
+<<<<<<< HEAD
+build_property.ProjectDir = C:\Users\ellap\Desktop\MIS321\321-Group-Project\api\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\ellap\Desktop\MIS321\321-Group-Project\api
+=======
+build_property.ProjectDir = /Users/bellakimbrell/Documents/SCHOOL/GROUP_PROJECT/321-Group-Project/api/
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /Users/bellakimbrell/Documents/SCHOOL/GROUP_PROJECT/321-Group-Project/api
+>>>>>>> 8346ba1cb6d4a6b9789a084792eef4518a25a3f8
+>>>>>>> 4f3896b35df394f8d4209cde491ed89f4c34d935
 build_property._RazorSourceGeneratorDebug = 

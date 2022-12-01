@@ -1,7 +1,27 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\mearn\\Source\\Repos\\Fall2022\\321Group9Project\\321-Group-Project\\api\\api.csproj": {}
+=======
+<<<<<<< HEAD
+    "C:\\Users\\ellap\\Desktop\\MIS321\\321-Group-Project\\api\\api.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\ellap\\Desktop\\MIS321\\321-Group-Project\\api\\api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ellap\\Desktop\\MIS321\\321-Group-Project\\api\\api.csproj",
+        "projectName": "api",
+        "projectPath": "C:\\Users\\ellap\\Desktop\\MIS321\\321-Group-Project\\api\\api.csproj",
+        "packagesPath": "C:\\Users\\ellap\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ellap\\Desktop\\MIS321\\321-Group-Project\\api\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ellap\\AppData\\Roaming\\NuGet\\NuGet.Config"
+=======
+    "/Users/bellakimbrell/Documents/SCHOOL/GROUP_PROJECT/321-Group-Project/api/api.csproj": {}
+>>>>>>> 4f3896b35df394f8d4209cde491ed89f4c34d935
   },
   "projects": {
     "C:\\Users\\mearn\\Source\\Repos\\Fall2022\\321Group9Project\\321-Group-Project\\api\\api.csproj": {
@@ -14,7 +34,12 @@
         "outputPath": "C:\\Users\\mearn\\Source\\Repos\\Fall2022\\321Group9Project\\321-Group-Project\\api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\mearn\\AppData\\Roaming\\NuGet\\NuGet.Config"
+=======
+          "/Users/bellakimbrell/.nuget/NuGet/NuGet.Config"
+>>>>>>> 8346ba1cb6d4a6b9789a084792eef4518a25a3f8
+>>>>>>> 4f3896b35df394f8d4209cde491ed89f4c34d935
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -78,7 +103,15 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+=======
+<<<<<<< HEAD
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.201/RuntimeIdentifierGraph.json"
+>>>>>>> 8346ba1cb6d4a6b9789a084792eef4518a25a3f8
+>>>>>>> 4f3896b35df394f8d4209cde491ed89f4c34d935
         }
       }
     }
